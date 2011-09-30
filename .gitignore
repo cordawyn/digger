@@ -1,0 +1,5 @@
+tmtags
+pkg/
+tmp/
+coverage/
+*.log

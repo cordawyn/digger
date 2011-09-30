@@ -1,0 +1,59 @@
+identification:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <identifier
+        xmlns="http://dl.kr.org/dig/2003/02/lang"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://dl.kr.org/dig/2003/02/lang
+        http://dl- web.man.ac.uk/dig/2003/02/dig.xsd"
+        name="FaCT" version="13.0.4" message="FaCT reasoner running on potato.cs.man.ac.uk (130.88.196.149)">
+        <supports>
+            <language>
+                <and/>
+                <or/>
+                <not/>
+                <some/>
+            </language>
+            <tell>
+                <impliesc/>
+            </tell>
+            <ask>
+                <satisfiable/>
+            </ask>
+        </supports>
+    </identifier>
+
+new_knowledge_base:
+    <?xml version=\"1.0\" encoding=\"UTF-8\"?>
+    <response
+        xmlns="http://dl.kr.org/dig/2003/02/lang"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://dl.kr.org/dig/2003/02/lang
+        http://dl-web.man.ac.uk/dig/2003/02/dig.xsd">
+        <kb uri="urn:dig:pellet:kb42fb6370:1258f2566a3:-7ff8"/>
+    </response>
+
+ok:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response xmlns="http://dl.kr.org/dig/2003/02/lang"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://dl.kr.org/dig/2003/02/lang
+        http://dl-web.man.ac.uk/dig/2003/02/dig.xsd">
+        <ok/>
+    </response>
+
+query:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <responses xmlns="http://dl.kr.org/dig/2003/02/lang"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://dl.kr.org/dig/2003/02/lang      http://dl-web.man.ac.uk/dig/2003/02/dig.xsd">
+        <conceptSet id="equipment">
+            <synonyms>
+                <catom name="http://www.appliedlinguisticsgroup.com/owl/tc_equipment.owl#solenoid"/>
+            </synonyms>
+            <synonyms>
+                <bottom/>
+            </synonyms>
+            <synonyms>
+                <top/>
+            </synonyms>
+        </conceptSet>
+    </responses>
