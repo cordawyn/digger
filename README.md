@@ -9,6 +9,11 @@ First, an instance of the reasoner interface must be initialized. Then you shoul
     reasoner = Digger::Reasoner.new "localhost", 8081
     kb_id = reasoner.new_knowledge_base
 
+If you want to log the debugging information that digger produces, you should assign a logger instance to Digger.logger:
+
+    require "logger"
+    Digger.logger = Logger.new("log/digger.log")
+
 To perform reasoning on the knowledge base, you need to upload it first to the remote reasoner:
 
     ontology = File.read("knowledge.owl")
@@ -38,4 +43,19 @@ A generic ASK query:
 
 Other common queries are wrapped into corresponding methods: all_individuals, ancestors, all_role_names, etc. Please refer to "reasoner.rb" or RDoc documentation on Digger::Reasoner for more information.
 
-All queries produce the output in Hash objects. Digger does not wrap and rescue Net exceptions, so you should handle them by yourself. You should check "reasoner.response.code_type" before accessing the output of digger for network errors (reasoner.response.code_type != Net::HTTPOK).
+All queries produce arrays of strings (class names) as output. Digger does not wrap and rescue Net exceptions, so you should handle them by yourself. You should check "reasoner.response.code_type" before accessing the output of digger for network errors (reasoner.response.code_type != Net::HTTPOK).
+
+Also, all queries accept HTTP options (currently, only :read_timeout is supported):
+
+    reasoner.parents(kb_id, "ns:Human", :read_timeout => 200)
+
+Reasoners
+---------
+
+Digger was tested with the following reasoners:
+  * Pellet
+  * FaCT++
+
+DIG specification
+-----------------
+Digger follows the specifications described in 'The DIG Description Logic Interface: DIG/1.1' book (dated February 7, 2003).
