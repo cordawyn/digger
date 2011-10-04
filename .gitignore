@@ -3,3 +3,8 @@ pkg/
 tmp/
 coverage/
 *.log
+vendor/ruby/
+TAGS
+.bundle
+*~
+.*~
